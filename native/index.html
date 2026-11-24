@@ -1,27 +1,82 @@
-<html>
-    <head>
-        <title>Форма авторизации</title>
-        <link rel="stylesheet" href="./styles.css"/>
-    </head>
-    <body>
-        <header>Шапка</header>
-        <main class="main">
-        
-            <div class="card">
-                <h4>Войти с помощью кнопок</h4>
-                <button>Войти через Google</button>
-                <button>Войти через Yandex</button>
-                <h4>Войти, используя пароль</h4>
-                <input type="email" placeholder="Введите почту"/>
-                <input type="password" placeholder="Введите пароль"/>
-                <div>
-                <input type="checkbox"/> <label>Запомнить пароль</label>
-                </div>
-                <button>Войти</button>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <header>
+        <h2>MyAccount</h2>
+    </header>
 
+    <main>
+        <section class="login-box">
+
+            <h1>Авторизация</h1>
+            <p>Войдите в свой аккаунт</p>
+
+            <div class="social-buttons">
+                <a href="https://accounts.google.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Google
+                </a>
+
+                <a href="https://id.vk.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    ВКонтакте
+                </a>
             </div>
-        </main>
-        <footer>Подвал</footer>
-    </body>
+
+            <div class="separator">или</div>
+
+            <form id="loginForm">
+
+                <label for="email">Электронная почта</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Введите почту"
+                    required
+                >
+
+                <label for="password">Пароль</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Введите пароль"
+                    required
+                >
+
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Сохранять сессию</label>
+                </div>
+
+                <button type="submit" id="loginButton">
+                    Войти
+                </button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <p class="registration">
+                Нет аккаунта?
+                <a href="#" id="register">Регистрация</a>
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MyAccount</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
 </html>

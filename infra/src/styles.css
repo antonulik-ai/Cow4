@@ -1,0 +1,227 @@
+/* Общие стили */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* Шапка */
+
+header {
+    background: #4b65d1;
+    color: white;
+    padding: 15px 40px;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* Основная часть */
+
+main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Форма авторизации */
+
+.login-box {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: appear 0.6s ease;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.login-box p {
+    color: #777;
+}
+
+/* Социальные кнопки */
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.social-buttons a {
+    width: 50%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.social-buttons a:hover {
+    background: #eee;
+}
+
+/* Разделитель */
+
+.separator {
+    margin: 20px 0;
+    color: #999;
+}
+
+/* Поля ввода */
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #4b65d1;
+    outline: none;
+    box-shadow: 0 0 5px #aab7f5;
+}
+
+/* Сохранение сессии */
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.remember input {
+    width: auto;
+    margin: 0;
+}
+
+.remember label {
+    margin: 0;
+}
+
+/* Кнопка входа */
+
+#loginButton {
+    width: 100%;
+    padding: 12px;
+    background: #4b65d1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginButton:hover {
+    background: #354bb0;
+}
+
+#loginButton:active {
+    transform: scale(0.97);
+}
+
+#loginButton:focus-visible {
+    outline: 2px solid #222299;
+    outline-offset: 3px;
+}
+
+/* Сообщения */
+
+#message {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Регистрация */
+
+.registration {
+    margin-top: 20px;
+}
+
+a {
+    color: #4b65d1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Подвал */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #777;
+}
+
+/* Анимация появления */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 480px) {
+    .login-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+}
+
+/* Уменьшение анимации */
+
+@media (prefers-reduced-motion: reduce) {
+    .login-box {
+        animation: none;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
